@@ -1,0 +1,31 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+</div>
+
+<mat-card>
+  <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="String to send to contract" name="interactString" [(ngModel)]="interactString" #ctrl="ngModel">
+      </mat-form-field>
+  </form>
+  <button mat-raised-button color="primary" (click)="sendInteract()">Interact with Contract</button>
+  <button mat-raised-button color = "primary" (click)="logInteractString(interactString)">Log the string input</button>
+  <p *ngIf="txAddress">The txhash is: {{txAddress}}</p>
+</mat-card>
+<br>
+<mat-card>
+    <button mat-raised-button color="accent" (click)="listenToContract()">Listen to Contract</button>
+    <button mat-raised-button color = "accent" (click)="stopListening()">Stop Listening</button>
+    <button mat-raised-button color="accent" (click)="getCurrentName()">Get Current Name</button>
+    <p *ngIf = "isListening">Listening on the contract...</p>
+    <p *ngIf="currentName"> The current name is:  {{currentName}}</p>
+    <p *ngIf="eventData"> The contract had a new event!  {{eventString}}</p>
+</mat-card>
+
+
+
+
+
