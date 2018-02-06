@@ -1,5 +1,7 @@
 # Web3Project
 
+This is a simple Web3 project to listen on and interact with a deployed contract on Rinkeby network.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.6.
 
 ## Development server
